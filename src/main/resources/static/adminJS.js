@@ -1,5 +1,40 @@
 'use strict';
 
+function showCurrUser() {
+    $.get(`/api/auth/`, function (data) {
+
+        let userTbody =
+            "<tr><td>" + data.id + "</td>" +
+            "<td>" + data.firstName + "</td>" +
+            "<td>" + data.lastname + "</td>" +
+            "<td>" + data.age + "</td>" +
+            "<td>" + data.email + "</td>" +
+            "<td>" + data.roleToString + "</td></tr>";
+        $("#test_user").html(userTbody);
+    })
+}
+
+function currEmail() {
+    $.get(`/api/auth/`, function (data) {
+        let authUserEmail = data.email;
+        $("#currentUserEmail").html(authUserEmail);
+    })
+}
+
+function currRoles() {
+    $.get(`/api/auth/`, function (data) {
+
+        let authUserRoles = data.roleToString;
+        $("#currentUserRoles").html(authUserRoles);
+    })
+}
+
+
+$(document).ready(function () {
+    showCurrUser();
+    currEmail();
+    currRoles();
+})
 const tbody = $('#test_user');
 getTableUser()
 function getTableUser() {
@@ -25,114 +60,13 @@ function getTableUser() {
                         </td>
                         <td>
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" onclick="deleteModal(${item.id})">
-                                Delete
+                            Delete
                             </button>
                         </td>
                     </tr>)`;
                 tbody.append(users)
             })
         })
-}
-
-let form = document.forms["create"];
-createNewUser()
-function createNewUser() {
-    form.addEventListener("submit", ev => {
-        ev.preventDefault();
-        let roles = [];
-        for (let i = 0; i < form.roles.options.length; i++) {
-            if (form.roles.options[i].selected) roles.push({
-                id: form.roles.options[i].value,
-                role: "ROLE_" + form.roles.options[i].text
-            });
-        }
-
-        fetch("http://localhost:8080/api/users", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                firstName: form.firstName.value,
-                lastname: form.lastname.value,
-                age: form.age.value,
-                email: form.email.value,
-                password: form.password.value,
-                roles: roles
-            })
-        }).then(() => {
-            form.reset();
-            $('#userTable').click();
-            getTableUser()
-        });
-    });
-}
-
-
-function showCurrUser() {
-    $.get(`/api/auth/`, function (data) {
-
-        let userTbody =
-            "<tr><td>" + data.id + "</td>" +
-            "<td>" + data.firstName + "</td>" +
-            "<td>" + data.lastname + "</td>" +
-            "<td>" + data.age + "</td>" +
-            "<td>" + data.email + "</td>" +
-            "<td>" + data.roleToString + "</td></tr>";
-        $("#test_user1").html(userTbody);
-    })
-}
-
-function currEmail() {
-    $.get(`/api/auth/`, function (data) {
-        let authUserEmail = data.email;
-        $("#currentUserEmail").html(authUserEmail);
-    })
-}
-
-function currRoles() {
-    $.get(`/api/auth/`, function (data) {
-
-        let authUserRoles = data.roleToString;
-        $("#currentUserRoles").html(authUserRoles);
-    })
-}
-
-
-$(document).ready(function () {
-    showCurrUser();
-    currEmail();
-    currRoles();
-})
-let deleteForm = document.forms["formDelete"]
-
-async function deleteModal(id) {
-    const modal = new bootstrap.Modal(document.querySelector('#delete'));
-    await openAndFillInTheModal(deleteForm, modal, id);
-    switch (deleteForm.roles.value) {
-        case '1':
-            deleteForm.roles.value = 'ADMIN';
-            break;
-        case '2':
-            deleteForm.roles.value = 'USER';
-            break;
-    }
-    deleteUser()
-}
-
-function deleteUser() {
-    deleteForm.addEventListener("submit", ev => {
-        ev.preventDefault();
-        fetch("http://localhost:8080/api/users/" + deleteForm.id.value, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(() => {
-            $('#closeDelete').click();
-            getTableUser();
-        });
-    });
 }
 
 let formEdit = document.forms["formEdit"];
@@ -174,7 +108,36 @@ function editUser() {
     });
 }
 
+let deleteForm = document.forms["formDelete"]
 
+async function deleteModal(id) {
+    const modal = new bootstrap.Modal(document.querySelector('#delete'));
+    await openAndFillInTheModal(deleteForm, modal, id);
+    switch (deleteForm.roles.value) {
+        case '1':
+            deleteForm.roles.value = 'ADMIN';
+            break;
+        case '2':
+            deleteForm.roles.value = 'USER';
+            break;
+    }
+    deleteUser()
+}
+
+function deleteUser() {
+    deleteForm.addEventListener("submit", ev => {
+        ev.preventDefault();
+        fetch("http://localhost:8080/api/users/" + deleteForm.id.value, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(() => {
+            $('#closeDelete').click();
+            getTableUser();
+        });
+    });
+}
 
 async function getOneUser(id) {
     let url = "http://localhost:8080/api/users/" + id;
@@ -191,4 +154,38 @@ async function openAndFillInTheModal(form, modal, id) {
     form.age.value = user.age;
     form.email.value = user.email;
     form.roles.value = user.roles;
+}
+
+let form = document.forms["create"];
+createNewUser()
+function createNewUser() {
+    form.addEventListener("submit", ev => {
+        ev.preventDefault();
+        let roles = [];
+        for (let i = 0; i < form.roles.options.length; i++) {
+            if (form.roles.options[i].selected) roles.push({
+                id: form.roles.options[i].value,
+                role: "ROLE_" + form.roles.options[i].text
+            });
+        }
+
+        fetch("http://localhost:8080/api/users", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: form.firstName.value,
+                lastname: form.lastname.value,
+                age: form.age.value,
+                email: form.email.value,
+                password: form.password.value,
+                roles: roles
+            })
+        }).then(() => {
+            form.reset();
+            $('#userTable').click();
+            getTableUser()
+        });
+    });
 }
