@@ -3,6 +3,7 @@ package ru.kata.spring.boot_security.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.UserService;
@@ -38,9 +39,14 @@ public class AdminControllerRest {
         userService.updateUser(user, user.getId());
         return new ResponseEntity<>(HttpStatus.OK);
     }
-    @DeleteMapping("/adminPage/{id}")
+    @DeleteMapping("/users/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") Integer id) {
         userService.delete(id);
         return new ResponseEntity<>("User id" + id + "has been deleted", HttpStatus.OK);
+    }
+
+    @GetMapping("/auth")
+    public ResponseEntity<User> getAuthUser(@AuthenticationPrincipal User user) {
+        return ResponseEntity.ok(user);
     }
 }
