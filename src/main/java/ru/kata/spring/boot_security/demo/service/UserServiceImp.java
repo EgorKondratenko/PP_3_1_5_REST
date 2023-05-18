@@ -20,7 +20,7 @@ public class UserServiceImp implements UserService {
     }
     @Override
     @Transactional
-    public void add(User user) {
+    public void save(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
@@ -31,7 +31,7 @@ public class UserServiceImp implements UserService {
     }
     @Transactional(readOnly = true)
     @Override
-    public User getUserById(int id) {
+    public User getUserById(Integer id) {
         return userRepository.getById(id);
     }
     @Transactional
@@ -42,12 +42,12 @@ public class UserServiceImp implements UserService {
     }
     @Transactional
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         userRepository.deleteById(id);
     }
     @Override
     @Transactional
-    public void updateUser(User updateUser, int id) {
+    public void updateUser(User updateUser, Integer id) {
         User editUser = getUserById(id);
         editUser.setFirstName(updateUser.getFirstName());
         editUser.setEmail(updateUser.getEmail());
@@ -62,5 +62,11 @@ public class UserServiceImp implements UserService {
     @Override
     public User findUsersByEmail(String email) {
         return userRepository.findUsersByEmail(email);
+    }
+
+    @Transactional
+    @Override
+    public User show(Integer id) {
+        return userRepository.findById(id).get();
     }
 }

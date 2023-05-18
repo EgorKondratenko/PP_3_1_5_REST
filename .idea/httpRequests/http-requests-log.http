@@ -1,0 +1,174 @@
+DELETE http://94.198.50.185:7081/api/users/3
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=FBCEA790E027F86EB8B0758297EAD6D9
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-11T001523-2.200.txt
+
+###
+
+PUT http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 70
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=FBCEA790E027F86EB8B0758297EAD6D9
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 3,
+  "name": "Thomas",
+  "lastName": "Shelby",
+  "age": 26
+}
+
+<> 2023-05-11T001523-1.200.txt
+
+###
+
+POST http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 68
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=FBCEA790E027F86EB8B0758297EAD6D9
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 3,
+  "name": "James",
+  "lastName": "Brown",
+  "age": 32
+}
+
+<> 2023-05-11T001523.200.txt
+
+###
+
+GET http://94.198.50.185:7081/api/users
+Content-Length: 24
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=AD7061F9E8FEF8E3E7F113F50FAED842
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+Accept: application/json
+
+<> 2023-05-11T001523.200.json
+
+###
+
+DELETE http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=AD7061F9E8FEF8E3E7F113F50FAED842
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-11T001254.405.json
+
+###
+
+PUT http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 70
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=AD7061F9E8FEF8E3E7F113F50FAED842
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 3,
+  "name": "Thomas",
+  "lastName": "Shelby",
+  "age": 26
+}
+
+<> 2023-05-11T001254.200.txt
+
+###
+
+POST http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 68
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=AD7061F9E8FEF8E3E7F113F50FAED842
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 3,
+  "name": "James",
+  "lastName": "Brown",
+  "age": 32
+}
+
+<> 2023-05-11T001253.200.txt
+
+###
+
+GET http://94.198.50.185:7081/api/users
+Content-Length: 24
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=779CB78922F1A815CEBA8C2A6D3F8632
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+Accept: application/json
+
+<> 2023-05-11T001253.200.json
+
+###
+
+DELETE http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=ABFE1E0CAFE19FB78B9E9D105F04CC6E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-11T000802.405.json
+
+###
+
+PUT http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=ABFE1E0CAFE19FB78B9E9D105F04CC6E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-11T000802-1.400.json
+
+###
+
+POST http://94.198.50.185:7081/api/users
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Cookie: JSESSIONID=ABFE1E0CAFE19FB78B9E9D105F04CC6E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-11T000802.400.json
+
+###
+
+GET http://94.198.50.185:7081/api/users
+Content-Length: 24
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+Accept: application/json
+
+<> 2023-05-11T000801.200.json
+
+###
+

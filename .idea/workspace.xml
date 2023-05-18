@@ -123,6 +123,7 @@
       <change afterPath="$PROJECT_DIR$/../PP_2_3_1_new/src/main/resources/db.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../PP_2_3_1_new/src/test/java/com/kondratenko/spring/AppTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../PP_3_1_3_Boot_Security_v2/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/AdminControllerRest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Sobesed/Sobesed.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Zad_4_3_7/Zad_4_3_7.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pp_3_1_2_v2/src/main/java/spring/pp_3_1_2_v2/dao/UserDao.java" afterDir="false" />
@@ -210,33 +211,40 @@
       <change afterPath="$PROJECT_DIR$/../zad_2_5_10/src/SpamAnalyzer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../zad_2_5_10/src/TextAnalyzer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../zad_2_5_10/zad_2_5_10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c9f278b6-04bf-4560-ba94-50a9a50aaa2e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c9f278b6-04bf-4560-ba94-50a9a50aaa2e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/SuccessUserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/SuccessUserHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/AdminController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/updateUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/RoleServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/RoleServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/service/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/MvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/SuccessUserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/SuccessUserHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/configs/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/RoleServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/RoleServiceImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kata/spring/boot_security/demo/service/UserServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/kata/spring/boot_security/demo/PassTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,8 +255,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -288,13 +297,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projekts/PP_3_1_4_BootStrap&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projekts/PP_3_1_5_REST&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;7e3a243e66b01669507087d96c56f184&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -310,8 +319,11 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootSecurityDemoApplication">
-    <configuration name="PassTest.encodePass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Node.js.adminJS.js">
+    <configuration name="All in rest-api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBootSecurityDemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-boot_security-demo" />
       <extension name="coverage">
         <pattern>
@@ -320,9 +332,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.kata.spring.boot_security.demo" />
-      <option name="MAIN_CLASS_NAME" value="ru.kata.spring.boot_security.demo.PassTest" />
-      <option name="METHOD_NAME" value="encodePass" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.kata.spring.boot_security.demo.SpringBootSecurityDemoApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -333,7 +344,7 @@
     <configuration name="updateUser.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PP_3_1_3_Boot_Security_v3/spring-boot_security-demo/templates/updateUser.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="users.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PP_3_1_3_Boot_Security_v3/spring-boot_security-demo/templates/users.html" useBuiltInWebServerPort="true">
+    <configuration name="adminJS.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="adminJS.js" working-dir="$PROJECT_DIR$/src/main/resources/static">
       <method v="2" />
     </configuration>
     <configuration name="SpringBootSecurityDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -345,10 +356,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.adminJS.js" />
+        <item itemvalue="JUnit.SpringBootSecurityDemoApplicationTests" />
+        <item itemvalue="HTTP Request.All in rest-api" />
         <item itemvalue="JavaScript Debug.updateUser.html" />
         <item itemvalue="JavaScript Debug.createUser.html" />
-        <item itemvalue="JavaScript Debug.users.html" />
-        <item itemvalue="JUnit.PassTest.encodePass" />
       </list>
     </recent_temporary>
   </component>
@@ -382,6 +394,14 @@
       <workItem from="1683632198830" duration="555000" />
       <workItem from="1683632763550" duration="3531000" />
       <workItem from="1683644714564" duration="6316000" />
+      <workItem from="1683661466374" duration="256000" />
+      <workItem from="1683742583891" duration="11922000" />
+      <workItem from="1684091783360" duration="4699000" />
+      <workItem from="1684263299499" duration="882000" />
+      <workItem from="1684264235985" duration="7165000" />
+      <workItem from="1684349891103" duration="1198000" />
+      <workItem from="1684351213930" duration="6286000" />
+      <workItem from="1684425144067" duration="392000" />
     </task>
     <servers />
   </component>

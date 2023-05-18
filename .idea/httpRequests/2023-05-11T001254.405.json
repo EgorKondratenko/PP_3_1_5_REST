@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-05-10T21:12:55.103+0000",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "message": "Request method 'DELETE' not supported",
+  "path": "/api/users"
+}
