@@ -1,19 +1,4 @@
-'use strict';
-
-function showCurrUser() {
-    $.get(`/api/auth/`, function (data) {
-
-        let userTbody =
-            "<tr><td>" + data.id + "</td>" +
-            "<td>" + data.firstName + "</td>" +
-            "<td>" + data.lastname + "</td>" +
-            "<td>" + data.age + "</td>" +
-            "<td>" + data.email + "</td>" +
-            "<td>" + data.roleToString + "</td></tr>";
-        $("#test_user").html(userTbody);
-    })
-}
-
+// 'use strict';
 function currEmail() {
     $.get(`/api/auth/`, function (data) {
         let authUserEmail = data.email;
@@ -24,17 +9,11 @@ function currEmail() {
 function currRoles() {
     $.get(`/api/auth/`, function (data) {
 
-        let authUserRoles = data.roleToString;
+        let authUserRoles = getRolesToString(data.roles);
         $("#currentUserRoles").html(authUserRoles);
     })
 }
 
-
-$(document).ready(function () {
-    showCurrUser();
-    currEmail();
-    currRoles();
-})
 const tbody = $('#test_user');
 getTableUser()
 function getTableUser() {
@@ -52,7 +31,7 @@ function getTableUser() {
                         <td class="pt-3" >${item.lastname}</td>
                         <td class="pt-3" >${item.age}</td>
                         <td class="pt-3" >${item.email}</td>
-                        <td class="pt-3" >${item.roleToString}</td>
+                        <td class="pt-3" >${getRolesToString(item.roles)}</td>
                         <td>
                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit" onclick="editModal(${item.id})">
                             Edit
@@ -67,6 +46,17 @@ function getTableUser() {
                 tbody.append(users)
             })
         })
+}
+
+function getRolesToString(rolesUser) {
+    let textRole="";
+    if (rolesUser.some(role => role.name === "ROLE_ADMIN")) {
+        textRole = textRole + "ADMIN "
+    }
+    if (rolesUser.some(role => role.name === "ROLE_USER")) {
+        textRole = textRole + "USER "
+    }
+    return textRole
 }
 
 let formEdit = document.forms["formEdit"];
@@ -189,3 +179,8 @@ function createNewUser() {
         });
     });
 }
+
+$(document).ready(function () {
+    currEmail();
+    currRoles();
+})
