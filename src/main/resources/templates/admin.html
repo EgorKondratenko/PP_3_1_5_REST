@@ -21,7 +21,8 @@
           <b>
             <span id="currentUserEmail"></span>
           </b>
-          with roles: <span id="currentUserRoles"> </span>
+          <b>with roles: <span id="currentUserRoles"> </span></b>
+
         </tr>
       </div>
       <div class="col-1">
@@ -87,7 +88,6 @@
                   </tr>
                   </thead>
                   <tbody id="test_user">
-
                   </tbody>
                 </table>
                 <!--                        МОДАЛЬНОЕ ОКНО EDIT-->
@@ -112,11 +112,10 @@
                                      disabled>
                             </label></b>
 
-
-                            <label for="editName">
+                            <label for="editFirstName">
                               <strong>First name</strong>
                               <input class="form-control" placeholder="Firstname"
-                                     type="text" name="firstname" id="editName">
+                                     type="text" name="firstname" id="editFirstName">
                             </label>
 
                             <b><label for="editLastName">Last name</label></b>
@@ -149,7 +148,6 @@
                           </div>
                         </div>
 
-                        <!-- Футер модального окна EDIT -->
                         <div class="modal-footer">
                           <button type="button" id="closeEdit" class="btn btn-secondary"
                                   data-dismiss="modal">Close
@@ -181,23 +179,23 @@
                             <input class="form-control" type="text" name="id" id="delID"
                                    disabled>
                             <br/>
-                            <b><label for="delfirstName">First Name</label></b>
+                            <b><label for="delFirstName">First Name</label></b>
                             <input class="form-control" type="text" name="firstName"
-                                   id="delfirstName" disabled>
+                                   id="delFirstName" disabled>
                             <br/>
-                            <b><label for="dellastname">Last Name</label></b>
+                            <b><label for="delLastName">Last Name</label></b>
                             <input class="form-control" type="text" name="lastname"
-                                   id="dellastname" disabled>
+                                   id="delLastName" disabled>
                             <br/>
-                            <b><label for="delage">Age</label></b>
+                            <b><label for="delAge">Age</label></b>
                             <input class="form-control" type="number" name="age"
-                                   id="delage"
+                                   id="delAge"
                                    disabled>
                             <br/>
 
-                            <b><label for="delemail">Email</label></b>
+                            <b><label for="delEmail">Email</label></b>
                             <input class="form-control" type="email" name="email"
-                                   id="delemail" disabled>
+                                   id="delEmail" disabled>
                             <br/>
 
                             <b><label>Role</label></b>
@@ -208,7 +206,6 @@
                           </div>
                         </div>
 
-                        <!-- Футер модального окна DELETE -->
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" id="closeDelete"
                                   data-dismiss="modal">Close
@@ -238,7 +235,7 @@
                     <br/>
                     <b><label for="new_lastname">Last Name</label></b>
                     <input class="form-control" placeholder="Last name" type="text"
-                           id="new_lastname" name="lastname">
+                           id="new_lastname" name="lastName">
                     <br/>
                     <b> <label for="new_age">Age</label></b>
                     <input class="form-control" placeholder="Age" type="text" id="new_age"
@@ -276,7 +273,6 @@
               User information-page
             </h1>
             <div class=" about user block border h4 p-3 m-0 border-bottom-0 ">
-              About user
             </div>
             <div style="background-color: white" class="tableuser border p-4">
               <table class="table table-striped">
@@ -300,13 +296,10 @@
     </div>
   </div>
 </div>
-
-
-
-
 <script th:src="@{/jquery/jquery.min.js}"></script>
 <script th:src="@{/popper/popper.min.js}"></script>
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/static/adminJS.js}"></script>
 </body>
 </html>
+
