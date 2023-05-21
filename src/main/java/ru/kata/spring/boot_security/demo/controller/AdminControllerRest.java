@@ -18,17 +18,18 @@ public class AdminControllerRest {
     public AdminControllerRest(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping("/users")
     public ResponseEntity<List<User>> adminPage() {
         List<User> allUsers = userService.listUsers();
         return ResponseEntity.ok(allUsers);
     }
     @GetMapping("/users/{id}")
-    public ResponseEntity<User> getUserOne(@PathVariable Integer id) {
-        User user = userService.getUserById(id);
+    public ResponseEntity<User> getUser(@PathVariable int id) {
+        User user = userService.show(id);
+        System.out.println(user);
         return ResponseEntity.ok(user);
     }
-
     @PostMapping("/users")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         userService.save(user);
